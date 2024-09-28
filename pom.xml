@@ -13,24 +13,13 @@
 	<artifactId>demo-discount-rules</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>demo-discount-rules</name>
-	<description>Demo project for Spring Boot</description>
-	<url />
-	<licenses>
-		<license />
-	</licenses>
-	<developers>
-		<developer />
-	</developers>
-	<scm>
-		<connection />
-		<developerConnection />
-		<tag />
-		<url />
-	</scm>
+	<description>Demo project for Spring Boot y Drools</description>
+	
 	<properties>
 		<java.version>21</java.version>
 		<drools-version>9.44.0.Final</drools-version>
 	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -42,6 +31,7 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<!-- Drools-->
 		 <dependency>
             <groupId>org.drools</groupId>
             <artifactId>drools-core</artifactId>
@@ -62,7 +52,8 @@
             <artifactId>drools-mvel</artifactId>
             <version>${drools-version}</version>
         </dependency>
-
+		<!-- Drools-->
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
