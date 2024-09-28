@@ -1,0 +1,32 @@
+//package org.drools.devguide.discount;
+
+import com.vobi.demo.discount.rule.model.Customer;
+import com.vobi.demo.discount.rule.model.Order;
+import com.vobi.demo.discount.rule.model.Discount;
+
+rule "Bronze Customers - 5% Discount"
+    when
+        $o: Order( $customer: customer, discount == null )
+        $c: Customer( category == Category.BRONZE, this == $customer )
+    then
+        $o.setDiscount(new Discount(5.0));
+        update($o);
+end
+
+rule "SILVER Customers - 6% Discount"
+    when
+        $o: Order( $customer: customer, discount == null )
+        $c: Customer( category == Category.SILVER, this == $customer )
+    then
+        $o.setDiscount(new Discount(6.0));
+        update($o);
+end
+
+rule "GOLD Customers - 7% Discount"
+    when
+        $o: Order( $customer: customer, discount == null )
+        $c: Customer( category == Category.GOLD, this == $customer )
+    then
+        $o.setDiscount(new Discount(9.0));
+        update($o);
+end
